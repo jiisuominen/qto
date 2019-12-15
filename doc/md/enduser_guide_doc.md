@@ -1,5 +1,78 @@
 #  END USER GUIDE
-[[_TOC_]]
+* [1. INTRODUCTION](#1-introduction)
+  * [1.1. PURPOSE](#11-purpose)
+  * [1.2. DOCUMENT STATUS ](#12-document-status-)
+  * [1.3. AUDIENCE](#13-audience)
+  * [1.4. MASTER STORAGE AND STORAGE FORMAT](#14-master-storage-and-storage-format)
+  * [1.5. SWITCH PROJECTS BY THE :TO OPERATOR IN THE SEARCH-BOX](#15-switch-projects-by-the-to-operator-in-the-search-box)
+  * [1.6. VERSION CONTROL](#16-version-control)
+  * [1.7. WAY OF WORKING](#17-way-of-working)
+* [2. INITIAL CONCEPTS](#2-initial-concepts)
+  * [2.1. ACCESSING MULTIPLE APPLICATIONS FROM THE SAME UI](#21-accessing-multiple-applications-from-the-same-ui)
+  * [2.2. SWITCH PROJECTS BY THE :TO OPERATOR IN THE SEARCH-BOX](#22-switch-projects-by-the-to-operator-in-the-search-box)
+* [3. LOGIN](#3-login)
+  * [3.1. ACCESSING MULTIPLE APPLICATIONS FROM THE SAME UI](#31-accessing-multiple-applications-from-the-same-ui)
+  * [3.2. OWN PASSWORD CHANGE](#32-own-password-change)
+  * [3.3. SWITCH ITEMS BY USING THE :FOR OPERATOR IN THE SEARCH-BOX](#33-switch-items-by-using-the-for-operator-in-the-search-box)
+  * [3.4. IMPORTANT PEACE OF INFORMATION ABOUT YOUR SECURITY](#34-important-peace-of-information-about-your-security)
+  * [3.5. LOGOUT FROM THE APPLICATION](#35-logout-from-the-application)
+* [4. THE LIST PAGE](#4-the-list-page)
+  * [4.1. VIEWING TABLES FROM DIFFERENT PROJECTS ( DATABASES )](#41-viewing-tables-from-different-projects-(-databases-))
+    * [4.1.1. Viewing the full content of the items](#411-viewing-the-full-content-of-the-items)
+    * [4.1.2. Viewing the list page](#412-viewing-the-list-page)
+    * [4.1.3. Listing url syntax](#413-listing-url-syntax)
+      * [4.1.3.1. The "pick" url param](#4131-the-"pick"-url-param)
+      * [4.1.3.2. The "hide" url param](#4132-the-"hide"-url-param)
+      * [4.1.3.3. The "with=col-operator-value" filter](#4133-the-"with=col-operator-value"-filter)
+      * [4.1.3.4. The "where=col-operator-value" filter](#4134-the-"where=col-operator-value"-filter)
+      * [4.1.3.5. Filtering with "like"](#4135-filtering-with-"like")
+  * [4.2. SORTING AN ITEM TABLE](#42-sorting-an-item-table)
+    * [4.2.1. The 'as' url syntax for printing the listing page](#421-the-'as'-url-syntax-for-printing-the-listing-page)
+  * [4.3. QUICK FILTERING AN ITEM TABLE](#43-quick-filtering-an-item-table)
+  * [4.4. SETTING THE ITEM TABLE PAGING SIZE](#44-setting-the-item-table-paging-size)
+  * [4.5. PAGING - SETTING THE ITEM TABLE'S PAGE NUMBER](#45-paging--setting-the-item-table's-page-number)
+  * [4.6. ITEM TABLE PAGING](#46-item-table-paging)
+  * [4.7. KEYBOARD USABILITY IN THE LIST PAGE](#47-keyboard-usability-in-the-list-page)
+    * [4.7.1. Navigability of the list page with the keyboard](#471-navigability-of-the-list-page-with-the-keyboard)
+    * [4.7.2. Focus the quick search box](#472-focus-the-quick-search-box)
+    * [4.7.3. Undo the edit on a cell](#473-undo-the-edit-on-a-cell)
+    * [4.7.4. Keyboard navigation on the edit form](#474-keyboard-navigation-on-the-edit-form)
+  * [4.8. NEW ITEM CREATION (CREATE)](#48-new-item-creation-(create))
+    * [4.8.1. Successful execution](#481-successful-execution)
+    * [4.8.2. Error handling on list page click create new item action](#482-error-handling-on-list-page-click-create-new-item-action)
+  * [4.9. ITEM EDIT (UPDATE)](#49-item-edit-(update))
+    * [4.9.1. Form edit](#491-form-edit)
+    * [4.9.2. In-line edit ( UPDATE )](#492-in-line-edit-(-update-))
+      * [4.9.2.1. Table columns resizing](#4921-table-columns-resizing)
+      * [4.9.2.2. Contents for the table's cells](#4922-contents-for-the-table's-cells)
+      * [4.9.2.3. Successful execution](#4923-successful-execution)
+      * [4.9.2.4. Error handling on db update error](#4924-error-handling-on-db-update-error)
+      * [4.9.2.5. Nulls handling](#4925-nulls-handling)
+  * [4.10. ITEM DELETION ( DELETE )](#410-item-deletion-(-delete-))
+  * [4.11. LIST AS PRINT-TABLE PAGE](#411-list-as-print-table-page)
+* [5. THE VIEW DOC PAGE](#5-the-view-doc-page)
+  * [5.1. LOADING THE VIEW DOC PAGE](#51-loading-the-view-doc-page)
+  * [5.2. USING THE TOC MENU](#52-using-the-toc-menu)
+  * [5.3. NAME ...](#53-name-)
+  * [5.4. NAME ...](#54-name-)
+  * [5.5. SEARCHING THE VIEW DOC BY QUICK FILTERING](#55-searching-the-view-doc-by-quick-filtering)
+  * [5.6. SMART INTERLINKING - SHARING ITEMS TO ANOTHER USERS](#56-smart-interlinking--sharing-items-to-another-users)
+  * [5.7. MANAGING THE VIEW DOC DATA WITH THE RIGHT CLICK MENU ( BETA )](#57-managing-the-view-doc-data-with-the-right-click-menu-(-beta-))
+  * [5.8. THE RIGHT TABLE OF CONTENTS MENU](#58-the-right-table-of-contents-menu)
+    * [5.8.1. Open & dive to manage only parts of the documents](#581-open-&-dive-to-manage-only-parts-of-the-documents)
+    * [5.8.2. Open in list](#582-open-in-list)
+    * [5.8.3. Export to md](#583-export-to-md)
+    * [5.8.4. Pdf print preview](#584-pdf-print-preview)
+    * [5.8.5. Add new parent node](#585-add-new-parent-node)
+    * [5.8.6. Add new sibling node](#586-add-new-sibling-node)
+* [6. THE SEARCH PAGE](#6-the-search-page)
+    * [6.1. Add new child node](#61-add-new-child-node)
+  * [6.1. CYCLING THOUGH THE SEARCH RESULTS](#61-cycling-though-the-search-results)
+    * [6.1.1. Remove node](#611-remove-node)
+  * [6.2. OPENING AN ITEM FROM THE SEARCH RESULT AND EDITING](#62-opening-an-item-from-the-search-result-and-editing)
+
+
+
 
     
 
@@ -345,36 +418,52 @@ The view page presents the data of a database table, having nested-set hierarchi
 
     
 
-### 5.1. Navigating in the view doc page
+### 5.1. Loading the view doc page
 When the page is loaded all the content of the document is presented / according to the urls params / which are applying the same filtering as in the list page , but on the hierarchical data-set …
 Should there be an error a dynamic snackbar is presented with the error message. The snackbar hides itself by default after 3.9 seconds ( set by default , but it could be pinned to the page by the user to view it properly / send it further). 
 
     
 
 ### 5.2. Using the TOC menu
-The Table of Contents ( TOC ) right menu can be opened and closed and scrolled separately from the scroll of the view doc. Clicking on any of the titles scrolls the document page on the left with the clicked title item scrolled on the top of the browser view port.
+The Table of Contents ( TOC ) right menu can be opened and closed and scrolled separately from the scroll of the view doc.
 
     
 
-### 5.3. Searching the view doc by filtering ( beta )
-Once the page is loaded the top search omnibox is selected. As soon as you start typing the document the ui starts shrinking the page by presenting ONLY the items containing the search string ( the search is case-insensitive)
+### 5.3. name ...
+
 
     
 
-### 5.4. Items interlinking
+### 5.4. name ...
+
+
+    
+
+### 5.5. Searching the view doc by quick filtering
+Once the page is loaded the top search omnibox is selected. As soon as you start typing the document the ui starts shrinking the page by presenting ONLY the items containing the search string ( the search is case-insensitive). You can cycle and update the content for the displayed items. If your focus is not on an editable element of the page .you could focus the quick search by typing the "/" char similarly to how you could focus the search box in gmail.
+
+    
+
+### 5.6. Smart interlinking - sharing items to another users
 The items interlinking works both in the list-grid and in the view-doc pages ( the description ).
 Any &lt;&lt;item&gt;&gt;-&lt;&lt;id&gt;&gt; where &lt;&lt;id&gt;&gt; is a whole number is converted into the jump to the anchor of that exact item id of that &lt;&lt;item&gt;&gt;. 
 For example :
 enduser_guide_doc-190214224374 will generate a link to this "items interlinking" title ( Hold on the Ctrl key and click on the link in the tooltip on the right of this paragraph. 
 The interlinking works between the different items as well :
 For example:
-requirements_doc-5
+requirements_doc-1
 If the item is not a "doc" item - aka not ending with the _doc the link will redirect the user to a filtered table with only this id: 
 for example: principles-1805311658
 
     
 
-### 5.5. The right table of contents menu
+### 5.7. Managing the view doc data with the right click menu ( beta )
+This feature is in beta mode still - expect some quirks along the way ...
+If you right click on a number of a title or on the title in the right TOC listing and choosing one of the following options you could:
+
+    
+
+### 5.8. The right table of contents menu
 You open and close the right click menu from the upper menu icon. The right click menu presents the structure of the document.You could navigate with the keyboard trough the right menu links too. 
 Note that when you click on a link on the right menu the title of the item you clicked on is scrolled to the top of the page.
 Right click on the title items presents the context menu containing several different options to perform on a branch of the document. 
@@ -382,39 +471,33 @@ Note, that you can quickly navigate with the tab key on the keyboard once the ri
 
     
 
-### 5.6. Managing the view doc data with the right click menu ( beta )
-This feature is in beta mode still - expect some quirks along the way ...
-If you right click on a number of a title or on the title in the right TOC listing and choosing one of the following options you could:
+#### 5.8.1. Open & dive to manage only parts of the documents
+View the current title and it's tree as a separate document altogether - the larger your documents become the easier it could be to edit them once you open just a specific branch from the document as it's own document.
 
     
 
-#### 5.6.1. Open & dive
-View the current title and it's tree as a separate document altogether
+#### 5.8.2. Open in list
+See the current branch of the document as table, which will display the additional metadata you could define to track your content ( for example status per item ). You could use the open list to quickly add src_code ui element to your items ( for now there is no view doc for this feature ... )
 
     
 
-#### 5.6.2. Open in list
-see the current branch of the document as table
+#### 5.8.3. Export to md
+This option exports this branch as Mark Down document ( GitHub syntax ), Microsoft Azure is supported as well.
 
     
 
-#### 5.6.3. Export to md
- This option exports this branch as Mark Down document ( GitHub syntax ), Microsoft Azure is supported as well.
-
-    
-
-#### 5.6.4. Pdf print preview
+#### 5.8.4. Pdf print preview
 View the current title's tree as pdf printable document convenient for printing as well ... 
 
     
 
-#### 5.6.5. Add new parent node
+#### 5.8.5. Add new parent node
 Adding new parent node means simply adding a new item in the document on the upper level in the hierarchy as the one from which you right clicked just after it - thus for example if you right clicked  the item with number 4.3. which is the 3rd item on the second level from the 4rth item on the first level you will get the 5.0 item and if the 5.0. item already exist it will be set as the 6.0. and so on ...
 This feature does not work for all the cases properly for now ... you might have to reload the page if the ui does not behave according to the description above - this is known bug with WIP status ...
 
     
 
-#### 5.6.6. Add new sibling node
+#### 5.8.6. Add new sibling node
 Adding new sibling node means simply adding a new item in the document on the same hierarchy level as the one from which you right clicked just after it - thus for example if you right clicked  the item with number 4.3. which is the 3rd item on the second level from the 4rth item on the first level you will get the 4.4. item and if the 4.4. item already exist it will be set as the 4.5. and so on ...
 This feature does not work for all the cases properly for now ... you might have to reload the page if the ui does not behave according to the description above - this is known bug with WIP status ...
 
